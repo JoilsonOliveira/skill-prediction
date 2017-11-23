@@ -3419,9 +3419,9 @@ module.exports = {
 			30: true,
 			31: true
 		}
-	},
+	},*/
 	11: { // Ninja
-		'*': { consumeAbnormal: [10154000, 10154001, 10154002, 10154003, 10154004, 10154005, 10154006] },
+		/*'*': { consumeAbnormal: [10154000, 10154001, 10154002, 10154003, 10154004, 10154005, 10154006] },
 		1: { // Combo Attack
 			'*': {
 				fixedSpeed: 1,
@@ -3814,7 +3814,7 @@ module.exports = {
 			1: true,
 			2: true,
 			30: true
-		},
+		},*/
 		15: { // Burning Heart
 			'*': {
 				stamina: 100,
@@ -3835,7 +3835,7 @@ module.exports = {
 			8: { length: 390 },
 			9: { length: 390 }
 		},
-		16: { // Death Blossom
+		/*16: { // Death Blossom
 			'*': {
 				fixedSpeed: 1,
 				length: 1525
@@ -3906,9 +3906,9 @@ module.exports = {
 				fixedSpeed: 1,
 				length: 1275
 			}
-		}
+		}*/
 	},
-	12: { // Valkyrie
+	/*12: { // Valkyrie
 		1: { // Slash
 			'*': {
 				length: 1100,
