@@ -67,6 +67,8 @@ module.exports = {
 		},
 		2: { // Evasive Roll
 			0: {
+				extended:true,
+				evasive:true,
 				length: 830,
 				distance: 150,
 				forceClip: true,
@@ -180,13 +182,10 @@ module.exports = {
 		},
 		12: { // Leaping Strike
 			0: {
+				extended:true,
 				length: 1525,
 				distance: 250,
 				noInterrupt: [32],
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				race: {
 					2: { length: 1525 }, // M.Helf
 					5: { length: 1525 }, // F.Aman
@@ -206,14 +205,12 @@ module.exports = {
 		},*/
 		16: { // Charging Slash
 			0: {
+				extended:true,
+				evasive:true,
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1115,
 				distance: 467.88,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				noRetry: true,
 				noInterrupt: [16, 32]
 			},
@@ -429,14 +426,11 @@ module.exports = {
 		},
 		32: { // Cross Parry
 			0: {
+				extended:true,
 				type: 'holdInfinite',
 				fixedSpeed: 1,
 				requiredBuff: [100200, 100201],
 				stamina: 50,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		34: { // Binding Sword
@@ -548,13 +542,10 @@ module.exports = {
 		},
 		2: { // Stand Fast
 			0: {
+				extended:true,
 				type: 'holdInfinite',
 				fixedSpeed: 1,
 				stamina: 50,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		3: { // Onslaught
@@ -691,14 +682,11 @@ module.exports = {
 		},
 		15: { // Charging Lunge
 			0: {
+				extended:true,
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1115,
 				distance: 474.5,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				noInterrupt: [2, 15]
 			},
 			1: {
@@ -807,10 +795,7 @@ module.exports = {
 		},
 		25: { // Wallop
 			'*': {
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
+				extended:true,
 			},
 			0: {
 				length: 2375,
@@ -831,6 +816,8 @@ module.exports = {
 		},
 		26: { // Backstep
 			0: {
+				extended:true,
+				evasive:true,
 				length: 725,
 				distance: -150,
 				forceClip: true,
@@ -841,16 +828,6 @@ module.exports = {
 					22067: { stamina: -100 },
 					22089: { stamina: -100 }
 				},
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		27: { // Rallying Cry
@@ -983,20 +960,12 @@ module.exports = {
 		},
 		4: { // Evasive Roll
 			'*': {
+				extended:true,
+				evasive:true,
 				length: 905,
 				distance: 150,
 				forceclip: true,
 				noInterrupt: [4],
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				race: {
 					8: {	// Popori: 150.316, 1185
 						distance: 150.32,
@@ -1009,16 +978,9 @@ module.exports = {
 		},
 		5: { // Dash
 			0: {
+				evasive:true,
 				fixedSpeed: 1,
 				length: 700,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 }
-				}
 			}
 		},
 		8: { // Overhand Strike
@@ -1064,12 +1026,9 @@ module.exports = {
 		},
 		9: { // Leaping Strike
 			0: {
+				extended:true,
 				length: 2175, //
 				distance: 250,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		10: { // Retaliate
@@ -1149,22 +1108,14 @@ module.exports = {
 		},
 		15: { // Startling Kick
 			0: {
+				extended:true,
+				evasive:true,
 				length: 1500,
 				distance: -175,
 				forceClip: true,
 				glyphs: {
 					23060: { speed: 1.25 }
 				},
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		16: { // Fury Strike
@@ -1186,21 +1137,13 @@ module.exports = {
 		},
 		17: { // Headlong Rush
 			0: {
+				extended:true,
+				evasive:true,
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1000,
 				distance: 413, // Baraka, 420.018 | M.Aman, 420.007 | M.Human 420
 				noInterrupt: [17],
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		18: { // Overpower
@@ -1337,11 +1280,8 @@ module.exports = {
 		},
 		2: { // Axe Block
 			'*': {
+				extended:true,
 				type: 'holdInfinite',
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			},
 			0: { fixedSpeed: 1 },
 			30: true,
@@ -1468,17 +1408,10 @@ module.exports = {
 		},
 		5: { // Dash
 			0: {
+				evasive:true,
 				fixedSpeed: 1,
 				length: 700,
 				noInterrupt: [2],
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 }
-				}
 			}
 		},
 		6: { // Sweeping Strike
@@ -1589,13 +1522,10 @@ module.exports = {
 		},
 		11: { // Leaping Strike 
 			0: {
+				extended:true,
 				length: 2190, // 2185
 				distance: 250,
 				noInterrupt: [2],
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		12: { // Unchained Anger
@@ -1796,17 +1726,10 @@ module.exports = {
 				}
 			},
 			0: {
+				evasive:true,
 				type: 'storeCharge',
 				length: 1015, // 1000, 1025
 				distance: 150,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 }
-				}
 			},
 			5: { type: 'grantCharge' },
 			10: { noInterrupt: [2, 3, 4, 10, 15, 18, 25, 30] }, // check noInterrupts
@@ -1866,20 +1789,12 @@ module.exports = {
 		},
 		29: { // Evasive Roll
 			0: {
+				extended:true,
+				evasive:true,
 				length: 905,
 				distance: 150,
 				forceClip: true,
 				noInterrupt: [2, 29],
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		30: { // Axe Counter
@@ -1903,14 +1818,11 @@ module.exports = {
 		},
 		31: { // Overwhelm
 			0: {
+				extended:true,
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1115,
 				distance: 470,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				noInterrupt: [2, 31],
 				noRetry: true
 			},
@@ -2031,19 +1943,11 @@ module.exports = {
 		},
 		7: { // Backstep
 			0: {
+				extended:true,
+				evasive:true,
 				length: 660,
 				distance: -200,
 				forceClip: true,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		8: { // Flame Pillar
@@ -2092,12 +1996,9 @@ module.exports = {
 		},
 		18: { // Glacial Retreat
 			0: {
+				extended:true,
 				length: 1100,
 				distance: -187.5,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				forceClip: true
 			}
 		},
@@ -2188,22 +2089,14 @@ module.exports = {
 		},
 		26: { // Teleport Jaunt
 			0: {
+				extended:true,
+				evasive:true,
 				type: 'teleport',
 				length: [200, 260],
 				distance: [0, 333],
 				noInterrupt: [26],
 				teleportStage: 1,
 				noRetry: true,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		27: { // Hailstorm
@@ -2407,19 +2300,11 @@ module.exports = {
 		},
 		6: { // Backstep
 			0: {
+				extended:true,
+				evasive:true,
 				length: 650,
 				distance: -200,
 				forceClip: true,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		7: { // Feign Death
@@ -2466,12 +2351,9 @@ module.exports = {
 		},
 		16: { // Breakaway Bolt
 			0: {
+				extended:true,
 				length: 1340,
 				distance: -250,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				forceClip: true
 			}
 		},
@@ -2555,19 +2437,12 @@ module.exports = {
 		},
 		33: { // Chase
 			0: {
+				evasive:true,
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1050, // 950-1025
 				distance: 413, // 412.078
 				noInterrupt: [33],
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 }
-				}
 			}
 		}
 	},
@@ -2663,12 +2538,10 @@ module.exports = {
 		},
 		26: { // Fiery Escape
 			0: {
+				extended:true,
+				evasive:true,
 				length: 1125,
 				distance: -250.5,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				forceClip: true
 			}
 		},
@@ -2781,19 +2654,11 @@ module.exports = {
 		},
 		38: { // Backstep
 			0: {
+				extended:true,
+				evasive:true,
 				length: 665,
 				distance: -200,
 				forceClip: true,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		39: { // Grace of Resurrection
@@ -2929,22 +2794,15 @@ module.exports = {
 		},
 		17: { // Teleport Jaunt
 			0: {
+				extended:true,
+				evasive:true,
 				type: 'teleport',
 				length: [200, 260],
 				distance: [0, 333],
 				noInterrupt: [17],
 				teleportStage: 1,
 				noRetry: true,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
+
 			}
 		},
 		18: { // Arun's Vitae
@@ -3386,6 +3244,7 @@ module.exports = {
 		},
 		9: { // Smite
 			0: {
+				evasive:true,
 				length: 1725,
 				distance: 168,
 				inPlace: {
@@ -3397,25 +3256,14 @@ module.exports = {
 					}],
 					distance: 0
 				},
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 }
-				},
 				noInterrupt: [1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 20]
 			}
 		},
 		10: { // Pendulum Strike
 			'*': {
+				extended:true,
 				length: 1000,
 				distance: -200,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				noInterrupt: [10],
 				chains: {
 					1: 30,
@@ -3485,12 +3333,9 @@ module.exports = {
 		},*/
 		15: { // Retribution
 			0: {
+				extended:true,
 				fixedSpeed: 1,
 				length: 1575, //
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		16: { // Shadow Reaping
@@ -3501,18 +3346,10 @@ module.exports = {
 		},
 		18: { // Shrouded Escape
 			0: {
+				extended:true,
+				evasive:true,
 				length: 850,
 				distance: 150,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		/*20: { // Cable Step
@@ -3523,18 +3360,12 @@ module.exports = {
 		},*/
 		40: { // Shadow Step
 			'*': {
+				extended:true,
+				evasive:true,
 				length: 700,
 				distance: 180,
 				forceClip: true,
 				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 },
 					10151000: { chain: 30 }
 				}
 			},
@@ -3629,6 +3460,8 @@ module.exports = {
 			'*': {
 				length: 1525,
 				distance: 137.88,
+				extended:true,
+				evasive:true,
 				noInterrupt: [20],
 				chains: {
 					'2-1': 30,
@@ -3856,6 +3689,8 @@ module.exports = {
 		},
 		11: { // Rocket Jump
 			'*': {
+				extended:true,
+				evasive:true,
 				triggerAbnormal: { 10153093: 2147483647 },
 				length: 1400,
 				noInterrupt: [3, 11, 15, 20],
@@ -3990,6 +3825,8 @@ module.exports = {
 		},
 		40: { // Rolling Reload
 			0: {
+				extended:true,
+				evasive:true,
 				triggerAbnormal: {
 					10152010: 3100,
 					10152012: 3100 // More? Less?, 1 abnormal is enough? Do all need to be blocked??
@@ -4045,10 +3882,7 @@ module.exports = {
 		},
 		2: { // Counter
 			'*': {
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
+				extended:true,
 				noRetry: true
 			},
 			1: {
@@ -4122,24 +3956,19 @@ module.exports = {
 		},*/
 		4: { // Ground Pound
 			'*': {
+				extended:true,
 				length: 3225,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			},
 			0: true,
 			30: true
 		},
 		5: { // Bullrush
 			0: {
+				extended:true,
+				evasive:true,
 				fixedSpeed: 1,
 				length: [2950, 650],
 				distance: [0, 135],
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		6: { // Haymaker
@@ -4231,13 +4060,10 @@ module.exports = {
 		},
 		10: { // Counterpunch
 			'*': {
+				extended:true,
 				length: 1850,
 				distance: 155,
 				requiredBuff: 10153000,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				chains: {
 					1: 30,
 					2: 30,
@@ -4294,22 +4120,14 @@ module.exports = {
 		},
 		40: { // Quick Dash
 			'*': {
+				extended:true,
+				evasive:true,
 				fixedSpeed: 1,
 				length: 580,
 				distance: 144,
 				forceClip: true,
 				hasChains: true,
 				noRetry: true,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			},
 			0: true, // TODO: Figure out which animations are correct
 			1: true,
@@ -4474,19 +4292,13 @@ module.exports = {
 		},
 		2: { // Shadow Jump
 			'*': {
+				extended:true,
+				evasive:true,
 				fixedSpeed: 1,
 				length: 650,
 				distance: 175,
 				forceClip: true,
 				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 },
 					10154010: { chain: 30 }
 				}
 			},
@@ -4523,21 +4335,13 @@ module.exports = {
 		},
 		4: { // Jagged Path
 			1: {
+				extended:true,
+				evasive:true,
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 665,
 				distance: 469,
 				noInterrupt: [4],
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			},
 			10: { length: 1500 },
 			11: {
@@ -4547,6 +4351,8 @@ module.exports = {
 		},
 		5: { // Impact Bomb
 			'*': {
+				extended:true,
+				evasive:true,
 				length: 1008,
 				distance: -291.6,
 				noInterrupt: [5],
@@ -4572,22 +4378,14 @@ module.exports = {
 				},
 				forceClip: true,
 				noRetry: true,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			},
 			0: true,
 			30: true
 		},
 		6: { // One Thousand Cuts
 			'*': {
+				extended:true,
+				evasive:true,
 				length: 430,
 				chains: { // Needed to state we want to trigger substage 4, else it will trigger 6
 					1: 30,
@@ -4605,16 +4403,6 @@ module.exports = {
 					19: 30,
 					20: 30
 				},
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			},
 			0: true,
 			1: { // 0/30(iframe) -> 1(dash, also iframes) -> 10(deeps, doesn't iframe in the very beginning) 
@@ -4628,19 +4416,11 @@ module.exports = {
 		},
 		7: { // Decoy Jutsu
 			0: {
+				extended:true,
+				evasive:true,
 				length: 1550,
 				onlyTarget: true,
 				noInterrupt: [7],
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			}
 		},
 		8: { // Fire Avalanche
@@ -4683,6 +4463,7 @@ module.exports = {
 		},
 		9: { // Smoke Bomb
 			'*': {
+				
 				length: 725,
 				chains: {
 					1: null,
@@ -4705,14 +4486,7 @@ module.exports = {
 				},
 			},
 			0: {
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 }
-				}
+				evasive:true
 			},
 			30: true
 		},
@@ -5349,20 +5123,12 @@ module.exports = {
 		},
 		14: { // Evasion
 			'*': {
+				extended:true,
+				evasive:true,
 				fixedSpeed: 1,
 				length: 825,
 				distance: 188.18,
 				forceClip: true,
-				abnormals: {
-					400800: { chain: 6 },
-					400801: { chain: 6 },
-					501320: { chain: 6 },
-					501321: { chain: 6 },
-					501322: { chain: 6 },
-					501323: { chain: 6 },
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				}
 			},
 			0: true,
 			1: {
@@ -5468,11 +5234,9 @@ module.exports = {
 		},
 		20: { // Backstab
 			0: {
+				extended:true,
+				evasive:true,
 				length: 1500,
-				abnormals: {
-					7692002: { chain: 6 },
-					9692002: { chain: 6 }
-				},
 				onlyTarget: true
 			}
 		},
