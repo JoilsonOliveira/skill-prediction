@@ -67,8 +67,7 @@ module.exports = {
 		},
 		2: { // Evasive Roll
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 830,
 				distance: 150,
 				forceClip: true,
@@ -182,7 +181,7 @@ module.exports = {
 		},
 		12: { // Leaping Strike
 			0: {
-				extended:true,
+				CC: "extended",
 				length: 1525,
 				distance: 250,
 				noInterrupt: [32],
@@ -205,8 +204,7 @@ module.exports = {
 		},*/
 		16: { // Charging Slash
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1115,
@@ -426,7 +424,7 @@ module.exports = {
 		},
 		32: { // Cross Parry
 			0: {
-				extended:true,
+				CC: "extended",
 				type: 'holdInfinite',
 				fixedSpeed: 1,
 				requiredBuff: [100200, 100201],
@@ -542,7 +540,7 @@ module.exports = {
 		},
 		2: { // Stand Fast
 			0: {
-				extended:true,
+				CC: "extended",
 				type: 'holdInfinite',
 				fixedSpeed: 1,
 				stamina: 50,
@@ -682,7 +680,7 @@ module.exports = {
 		},
 		15: { // Charging Lunge
 			0: {
-				extended:true,
+				CC: "extended",
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1115,
@@ -795,7 +793,7 @@ module.exports = {
 		},
 		25: { // Wallop
 			'*': {
-				extended:true,
+				CC: "extended",
 			},
 			0: {
 				length: 2375,
@@ -816,8 +814,7 @@ module.exports = {
 		},
 		26: { // Backstep
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 725,
 				distance: -150,
 				forceClip: true,
@@ -960,8 +957,7 @@ module.exports = {
 		},
 		4: { // Evasive Roll
 			'*': {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 905,
 				distance: 150,
 				forceclip: true,
@@ -978,7 +974,7 @@ module.exports = {
 		},
 		5: { // Dash
 			0: {
-				evasive:true,
+				evasive: true,
 				fixedSpeed: 1,
 				length: 700,
 			}
@@ -1026,8 +1022,8 @@ module.exports = {
 		},
 		9: { // Leaping Strike
 			0: {
-				extended:true,
-				length: 2175, //
+				CC: "extended",
+				length: 2175,
 				distance: 250,
 			}
 		},
@@ -1108,8 +1104,7 @@ module.exports = {
 		},
 		15: { // Startling Kick
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 1500,
 				distance: -175,
 				forceClip: true,
@@ -1137,8 +1132,7 @@ module.exports = {
 		},
 		17: { // Headlong Rush
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1000,
@@ -1280,7 +1274,7 @@ module.exports = {
 		},
 		2: { // Axe Block
 			'*': {
-				extended:true,
+				CC: "extended",
 				type: 'holdInfinite',
 			},
 			0: { fixedSpeed: 1 },
@@ -1408,7 +1402,7 @@ module.exports = {
 		},
 		5: { // Dash
 			0: {
-				evasive:true,
+				evasive: true,
 				fixedSpeed: 1,
 				length: 700,
 				noInterrupt: [2],
@@ -1522,7 +1516,7 @@ module.exports = {
 		},
 		11: { // Leaping Strike 
 			0: {
-				extended:true,
+				CC: "extended",
 				length: 2190, // 2185
 				distance: 250,
 				noInterrupt: [2],
@@ -1545,9 +1539,9 @@ module.exports = {
 			}
 		},
 		15: { // Vampiric Blow  //         Uncomment this for being able to VB if, a VB chain is avaiable, else, it won't work
-            '*': { length: 1930 },            // Usage:            1. "Show default Chained Skills" in the Chained Skills menu must be on.        		                               
-            0: {                             //                    2. Must be in combat when used.  
-                type: 'charging',           //                    Else the animation of VB won't go off causing slight desync.
+			'*': { length: 1930 },            // Usage:            1. "Show default Chained Skills" in the Chained Skills menu must be on.        		                               
+			0: {                             //                    2. Must be in combat when used.  
+				type: 'charging',           //                    Else the animation of VB won't go off causing slight desync.
 				length: [800, 800, 800],
 				noInterrupt: [2, '3-0', 4, '10-0', '15-14', '18-0', 24, 25, 30], // VB can't chain from stages 10, 11 or 12 in the client, it only can on stages 13
 				//autorelease: 2515 // ish
@@ -1557,17 +1551,17 @@ module.exports = {
 					4010150: { chargeSpeed: 0.2 }
 				},
 				chains: {
-                    '3-13': 14, // this is fine though maybe uneeded, 13: 14 does the same
-                    '10-13': 14,
-                    '18-13': 14
-                },
+					'3-13': 14, // this is fine though maybe uneeded, 13: 14 does the same
+					'10-13': 14,
+					'18-13': 14
+				},
 				level: [
 					{ length: 800 },	// 1600
 					{ length: [800, 800] },	// 1600
 					{ length: [800, 800] }	// 1600
 				]
-            },
-            10: {
+			},
+			10: {
 				distance: 87.28, // 87.272
 				noInterrupt: [2, 4, 24, 25, 30],
 				race: {
@@ -1578,7 +1572,7 @@ module.exports = {
 					10: { distance: 64.88 } // Baraka: 64.884
 				}
 			},
-            11: {
+			11: {
 				distance: 87.28, // 87.272
 				noInterrupt: [2, 4, 24, 25, 30],
 				race: {
@@ -1589,7 +1583,7 @@ module.exports = {
 					10: { distance: 64.88 } // Baraka: 64.884
 				}
 			},
-            12: {
+			12: {
 				distance: 87.28, // 87.272
 				noInterrupt: [2, 4, 24, 25, 30],
 				race: {
@@ -1600,7 +1594,7 @@ module.exports = {
 					10: { distance: 64.88 } // Baraka: 64.884
 				}
 			},
-            13: {
+			13: {
 				distance: 87.28, // 87.272
 				noInterrupt: [2, 4, 24, 25, 30],
 				race: {
@@ -1611,7 +1605,7 @@ module.exports = {
 					10: { distance: 64.88 } // Baraka: 64.884
 				}
 			},
-            14: { 
+			14: {
 				distance: 87.28, // 87.272
 				race: {
 					3: { distance: 72.79 }, // F.Helf: 72.785
@@ -1726,7 +1720,7 @@ module.exports = {
 				}
 			},
 			0: {
-				evasive:true,
+				evasive: true,
 				type: 'storeCharge',
 				length: 1015, // 1000, 1025
 				distance: 150,
@@ -1789,8 +1783,7 @@ module.exports = {
 		},
 		29: { // Evasive Roll
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 905,
 				distance: 150,
 				forceClip: true,
@@ -1818,7 +1811,7 @@ module.exports = {
 		},
 		31: { // Overwhelm
 			0: {
-				extended:true,
+				CC: "extended",
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1115,
@@ -1943,8 +1936,7 @@ module.exports = {
 		},
 		7: { // Backstep
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 660,
 				distance: -200,
 				forceClip: true,
@@ -1996,7 +1988,7 @@ module.exports = {
 		},
 		18: { // Glacial Retreat
 			0: {
-				extended:true,
+				CC: "extended",
 				length: 1100,
 				distance: -187.5,
 				forceClip: true
@@ -2089,8 +2081,7 @@ module.exports = {
 		},
 		26: { // Teleport Jaunt
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				type: 'teleport',
 				length: [200, 260],
 				distance: [0, 333],
@@ -2185,7 +2176,7 @@ module.exports = {
 				length: [590, 590, 590],
 				noInterrupt: [4, 22],
 				autoRelease: 2550,
-                noRetry:true,
+				noRetry: true,
 				abnormals: {
 					26180: { chargeSpeed: 0.3 },
 					601450: { chargeSpeed: 0.5 }
@@ -2236,7 +2227,7 @@ module.exports = {
 				type: 'charging',
 				length: [780, 780, 780],
 				noInterrupt: [3, 22],
-                noRetry:true,
+				noRetry: true,
 				autoRelease: 2550,
 				abnormals: {
 					26160: { chargeSpeed: 0.3 },
@@ -2300,8 +2291,7 @@ module.exports = {
 		},
 		6: { // Backstep
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 650,
 				distance: -200,
 				forceClip: true,
@@ -2351,7 +2341,7 @@ module.exports = {
 		},
 		16: { // Breakaway Bolt
 			0: {
-				extended:true,
+				CC: "extended",
 				length: 1340,
 				distance: -250,
 				forceClip: true
@@ -2437,7 +2427,7 @@ module.exports = {
 		},
 		33: { // Chase
 			0: {
-				evasive:true,
+				evasive: true,
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 1050, // 950-1025
@@ -2538,8 +2528,7 @@ module.exports = {
 		},
 		26: { // Fiery Escape
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 1125,
 				distance: -250.5,
 				forceClip: true
@@ -2654,8 +2643,7 @@ module.exports = {
 		},
 		38: { // Backstep
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 665,
 				distance: -200,
 				forceClip: true,
@@ -2794,8 +2782,7 @@ module.exports = {
 		},
 		17: { // Teleport Jaunt
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				type: 'teleport',
 				length: [200, 260],
 				distance: [0, 333],
@@ -3244,7 +3231,7 @@ module.exports = {
 		},
 		9: { // Smite
 			0: {
-				evasive:true,
+				evasive: true,
 				length: 1725,
 				distance: 168,
 				inPlace: {
@@ -3261,7 +3248,7 @@ module.exports = {
 		},
 		10: { // Pendulum Strike
 			'*': {
-				extended:true,
+				CC: "extended",
 				length: 1000,
 				distance: -200,
 				noInterrupt: [10],
@@ -3333,7 +3320,7 @@ module.exports = {
 		},*/
 		15: { // Retribution
 			0: {
-				extended:true,
+				CC: "extended",
 				fixedSpeed: 1,
 				length: 1575, //
 			}
@@ -3346,8 +3333,7 @@ module.exports = {
 		},
 		18: { // Shrouded Escape
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 850,
 				distance: 150,
 			}
@@ -3360,8 +3346,7 @@ module.exports = {
 		},*/
 		40: { // Shadow Step
 			'*': {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 700,
 				distance: 180,
 				forceClip: true,
@@ -3460,8 +3445,7 @@ module.exports = {
 			'*': {
 				length: 1525,
 				distance: 137.88,
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				noInterrupt: [20],
 				chains: {
 					'2-1': 30,
@@ -3689,8 +3673,7 @@ module.exports = {
 		},
 		11: { // Rocket Jump
 			'*': {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				triggerAbnormal: { 10153093: 2147483647 },
 				length: 1400,
 				noInterrupt: [3, 11, 15, 20],
@@ -3825,8 +3808,7 @@ module.exports = {
 		},
 		40: { // Rolling Reload
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				triggerAbnormal: {
 					10152010: 3100,
 					10152012: 3100 // More? Less?, 1 abnormal is enough? Do all need to be blocked??
@@ -3882,7 +3864,7 @@ module.exports = {
 		},
 		2: { // Counter
 			'*': {
-				extended:true,
+				CC: "extended",
 				noRetry: true
 			},
 			1: {
@@ -3956,7 +3938,7 @@ module.exports = {
 		},*/
 		4: { // Ground Pound
 			'*': {
-				extended:true,
+				CC: "extended",
 				length: 3225,
 			},
 			0: true,
@@ -3964,8 +3946,7 @@ module.exports = {
 		},
 		5: { // Bullrush
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				fixedSpeed: 1,
 				length: [2950, 650],
 				distance: [0, 135],
@@ -4060,7 +4041,7 @@ module.exports = {
 		},
 		10: { // Counterpunch
 			'*': {
-				extended:true,
+				CC: "extended",
 				length: 1850,
 				distance: 155,
 				requiredBuff: 10153000,
@@ -4120,8 +4101,7 @@ module.exports = {
 		},
 		40: { // Quick Dash
 			'*': {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				fixedSpeed: 1,
 				length: 580,
 				distance: 144,
@@ -4292,8 +4272,7 @@ module.exports = {
 		},
 		2: { // Shadow Jump
 			'*': {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				fixedSpeed: 1,
 				length: 650,
 				distance: 175,
@@ -4335,8 +4314,7 @@ module.exports = {
 		},
 		4: { // Jagged Path
 			1: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				type: 'dash',
 				fixedSpeed: 1,
 				length: 665,
@@ -4351,8 +4329,7 @@ module.exports = {
 		},
 		5: { // Impact Bomb
 			'*': {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 1008,
 				distance: -291.6,
 				noInterrupt: [5],
@@ -4384,8 +4361,7 @@ module.exports = {
 		},
 		6: { // One Thousand Cuts
 			'*': {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 430,
 				chains: { // Needed to state we want to trigger substage 4, else it will trigger 6
 					1: 30,
@@ -4416,8 +4392,7 @@ module.exports = {
 		},
 		7: { // Decoy Jutsu
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 1550,
 				onlyTarget: true,
 				noInterrupt: [7],
@@ -4463,7 +4438,7 @@ module.exports = {
 		},
 		9: { // Smoke Bomb
 			'*': {
-				
+
 				length: 725,
 				chains: {
 					1: null,
@@ -4486,7 +4461,7 @@ module.exports = {
 				},
 			},
 			0: {
-				evasive:true
+				evasive: true
 			},
 			30: true
 		},
@@ -5123,8 +5098,7 @@ module.exports = {
 		},
 		14: { // Evasion
 			'*': {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				fixedSpeed: 1,
 				length: 825,
 				distance: 188.18,
@@ -5234,8 +5208,7 @@ module.exports = {
 		},
 		20: { // Backstab
 			0: {
-				extended:true,
-				evasive:true,
+				CC: ["evasive", "extended"],
 				length: 1500,
 				onlyTarget: true
 			}
