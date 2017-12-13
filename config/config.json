@@ -14,5 +14,5 @@
 	"defend_success_strict": true,
 	"debug_loc": false,
 	"mount_check": true,
-	"wp_roll_control": false
+	"body_rolls_check": false
 }
