@@ -2475,7 +2475,10 @@ module.exports = {
 			0: { length: 1275 }
 		},
 		11: { // Metamorphic Blast
-			0: { length: 830 }
+			0: {
+				length: 820,
+				checkReset: true
+			}
 		},
 		12: { // Resurrect
 			0: {
@@ -2710,6 +2713,7 @@ module.exports = {
 			0: {
 				length: 820,
 				noInterrupt: [1, 2, 4, '5-10', 6, '9-10', 10, 13, 14, 15, 16, 17, 21, '18-10', '22-10', 37, '41-10', 43], // The skill behaves the same way Metamorphic Smite does from lvls 1 to 10 then at lvl 11 it loses its cancelling properties
+				checkReset: true,
 				chains: {
 					8: 30,
 					23: 30
@@ -3574,9 +3578,9 @@ module.exports = {
 		9: { // Mana Missiles
 			'*': {
 				blockCancelPacket: true,
-				length: 1250,
-				noInterrupt: [20],
-				noRetry: true
+				length: 1240,
+				noInterrupt: [20]
+
 			},
 			0: {
 				triggerAbnormal: { 10152085: 4100 },
@@ -3586,11 +3590,13 @@ module.exports = {
 			10: {
 				triggerAbnormal: { 10152085: 4100 },
 				distance: -50,
+				noRetry: true,
 				projectiles: [21, 22]
 			},
 			11: {
 				triggerAbnormal: { 10152085: 4100 },
 				distance: -100,
+				noRetry: true,
 				projectiles: [21, 22, 23, 24, 25]
 			},
 			21: {
@@ -4575,23 +4581,22 @@ module.exports = {
 			'*': {
 				fixedSpeed: 1,
 				length: 1525,
-				noInterrupt: ['4-10', 16],
+				noInterrupt: [16],
 				chains: {
 					1: null,
-					2: 30,
+					2: null,
 					3: null,
-					'4-10': 'borked',
-					5: 30,
+					4: null,
+					5: null,
 					6: null,
 					7: null,
-					8: 30, // reeeeeeeeee
+					8: null,
 					9: null,
 					10: null,
 					12: null,
-					13: null, // eeeeeeeeeeee
+					13: null,
 					14: null,
 					15: null,
-					17: 30,
 					18: null,
 					19: null,
 					20: null
@@ -4629,24 +4634,23 @@ module.exports = {
 			'*': {
 				length: 1000,
 				distance: 68.535,
-				noInterrupt: ['4-10', 18],
+				noInterrupt: [18],
 				chains: {
 					1: null,
-					2: 30,
+					2: null,
 					3: null,
-					'4-10': 'borked',
-					5: 30,
+					4: null,
+					5: null,
 					6: null,
 					7: null,
-					8: 30, // reeeeeeeeee
+					8: null,
 					9: null,
 					10: null,
 					12: null,
-					13: null, // eeeeeeeeeeee
+					13: null,
 					14: null,
 					15: null,
 					16: null,
-					17: 30,
 					19: null,
 					20: null
 				}
