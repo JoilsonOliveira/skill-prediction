@@ -43,5 +43,11 @@ module.exports = {
 	//10152084: true, // Time bomb Projectile end and fire up?
 	10152085: true, // Mana Missiles Charging & Firing
 	10152086: true, // Arcane Bomb
-	10153093: true // Rocket Jump & Rolling Reload
+	10153093: true, // Rocket Jump & Rolling Reload
+
+	/* Valkyrie */
+
+	10155020: true, // Evasion
+
+	900300: true // Most charging skills abnormal(Leaky)
 }

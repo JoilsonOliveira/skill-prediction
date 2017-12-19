@@ -2097,7 +2097,17 @@ module.exports = {
 			}
 		},
 		27: { // Hailstorm
-			0: { length: 980 }
+			0: {
+				length: 980,
+				abnormals: {
+					902: { speed: 1.15 },
+					911: { speed: 1.15 },
+					916: { speed: 1.15 },
+					920: { speed: 1.225 },
+					921: { speed: 1.225 },
+					922: { speed: 1.225 }
+				}
+			}
 		},
 		30: { // Nova
 			0: {
@@ -2291,7 +2301,9 @@ module.exports = {
 					902: { speed: 1.15 },
 					911: { speed: 1.15 },
 					916: { speed: 1.15 },
-					920: { speed: 1.225 }
+					920: { speed: 1.225 },
+					921: { speed: 1.225 },
+					922: { speed: 1.225 }
 				}
 			}
 		},
@@ -5120,7 +5132,7 @@ module.exports = {
 				distance: 188.18,
 				forceClip: true,
 			},
-			0: true,
+			0: { triggerAbnormal: { 10155020: 4000 } },
 			1: {
 				consumeAbnormal: 10155020,
 				requiredBuff: 10155020
