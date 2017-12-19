@@ -1235,7 +1235,7 @@ module.exports = {
 		1: { // Combo Attack
 			'*': { noInterrupt: [1, 2, 4] },
 			0: {
-				length: 1107, 
+				length: 1107,
 				distance: 78,
 				race: {
 					3: { distance: 63.24 }, // F.Helf: 63.236
@@ -2456,7 +2456,9 @@ module.exports = {
 					902: { speed: 1.15 },
 					911: { speed: 1.15 },
 					916: { speed: 1.15 },
-					920: { speed: 1.225 }
+					920: { speed: 1.225 },
+					921: { speed: 1.225 },
+					922: { speed: 1.225 }
 				}
 			}
 		},
@@ -2493,12 +2495,12 @@ module.exports = {
 					28045: { speed: 1.15 }
 				},
 				abnormals: {
-                    902: { speed: 1.15 },
-                    911: { speed: 1.15 },
-                    916: { speed: 1.15 },
-                    920: { speed: 1.225 },
-                    921: { speed: 1.225 },
-                    922: { speed: 1.225 }
+					902: { speed: 1.15 },
+					911: { speed: 1.15 },
+					916: { speed: 1.15 },
+					920: { speed: 1.225 },
+					921: { speed: 1.225 },
+					922: { speed: 1.225 }
 				}
 			}
 		},
@@ -2754,7 +2756,7 @@ module.exports = {
 					916: { speed: 1.25 },
 					920: { speed: 1.375 },
 					921: { speed: 1.375 },
-                    922: { speed: 1.375 }
+					922: { speed: 1.375 }
 				}
 			}
 		},
