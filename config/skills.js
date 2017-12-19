@@ -335,22 +335,28 @@ module.exports = {
 				length: 2000,
 				distance: 160,
 				noInterrupt: [1, 2, 3, 4, 8, 9, 10, 12, 13, 16, 17, 19, 21, 22, 28, 29, 32, 34, 36, 37, 39],
-				abnormals: {
-					100200: { skill: 390100 },
-					100201: { skill: 390100 }
-				},
 				chains: {
 					11: 30,
 					18: 30,
 					27: 30
+				},
+				level: {
+					9: {
+						abnormals: {
+							100201: { skill: 390100 }
+						}
+					}
 				}
 			},
 			30: {
 				length: 2650,
 				distance: 210,
-				abnormals: {
-					100200: { skill: 390130 },
-					100201: { skill: 390130 }
+				level: {
+					9: {
+						abnormals: {
+							100201: { skill: 390130 }
+						}
+					}
 				}
 			}
 		},
@@ -387,7 +393,7 @@ module.exports = {
 		30: { // Scythe
 			'*': { distance: 150 }, // Old fast cast value was wrong on Elin, unless that had a pve intention on it, idk.
 			0: {
-				length: 1850,
+				length: 1825,
 				noInterrupt: [1, 3, 5, 8, 9, 10, 13, 16, 17, 18, 19, 21, 22, 23, 27, 28, 32, 34, 35, 39],
 				abnormals: {
 					100801: { skill: 380100 }
@@ -1229,7 +1235,7 @@ module.exports = {
 		1: { // Combo Attack
 			'*': { noInterrupt: [1, 2, 4] },
 			0: {
-				length: 1105, // 1100 new length, at least on Elin and M.Casta, maybe some sneaky equalization?
+				length: 1107, 
 				distance: 78,
 				race: {
 					3: { distance: 63.24 }, // F.Helf: 63.236
