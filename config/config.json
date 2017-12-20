@@ -14,5 +14,6 @@
 	"defendSuccessStrict": true,
 	"debugLoc": false,
 	"mountCheck": true,
-	"bodyRollsCheck": false
+	"bodyRollsCheck": false,
+	"FakeSmt":true
 }
