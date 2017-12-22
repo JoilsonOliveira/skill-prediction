@@ -1882,40 +1882,47 @@ module.exports = {
 				length: 1285,
 				race: {
 					9: { length: 1015 } // Elin
-				},
-				noRetry: true
+				}
 			},
 			0: {
 				type: 'charging',
 				length: [1000, 1000],
 				noInterrupt: [7, 26],
-				autorelease: 0,
 				abnormals: {
 					25140: { chargeSpeed: 0.3 }
 				}
 			},
 			10: {
-				noInterrupt: [7, 26], //
-				abnormals: {
-					500150: { skill: 330110 },
-					//501600: { skill: 330150 },
-					501650: { skill: 330150 }
+				noInterrupt: [7, 26],
+				level: {
+					11: { 
+						abnormals: {
+							500150: { skill: 330110 },
+							501650: { skill: 330150 }
+						}
+					}
 				}
 			},
 			11: {
-				noInterrupt: [7, 26], //
-				abnormals: {
-					500150: { skill: 330111 },
-					//501600: { skill: 330150 },
-					501650: { skill: 330150 }
+				noInterrupt: [7, 26],
+				level: {
+					11: { 
+						abnormals: {
+							500150: { skill: 330111 },
+							501650: { skill: 330151 }
+						}
+					}
 				}
 			},
 			12: {
-				noInterrupt: [7, 26], //
-				abnormals: {
-					500150: { skill: 330112 },
-					//501600: { skill: 330150 },
-					501650: { skill: 330150 }
+				noInterrupt: [7, 26],
+				level: {
+					11: { 
+						abnormals: {
+							500150: { skill: 330112 },
+							501650: { skill: 330152 }
+						}
+					}
 				}
 			}
 		},
@@ -1931,12 +1938,17 @@ module.exports = {
 				},
 				abnormals: {
 					25100: { speed: 1.25 },
-					500150: { skill: 320100 },
-					//501600: { skill: 320150 },
-					501650: { skill: 320150 }
 				},
 				race: {
 					9: { length: 3700 } // Elin
+				},
+				level: {
+					9: {
+						abnormals: { 
+							500150: { skill: 320100 },
+							501650: { skill: 320150 }
+						}
+					}
 				}
 			}
 		},
@@ -2154,7 +2166,9 @@ module.exports = {
 			10: true,
 			11: true,
 			12: true,
-			50: true
+			50: true,
+			51: true,
+			52: true
 		},
 		34: { // Mana Boost
 			0: { length: 750 }
