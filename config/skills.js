@@ -1882,12 +1882,14 @@ module.exports = {
 				length: 1285,
 				race: {
 					9: { length: 1015 } // Elin
-				}
+				},
+				noRetry: true
 			},
 			0: {
 				type: 'charging',
 				length: [1000, 1000],
 				noInterrupt: [7, 26],
+				autorelease: 0,
 				abnormals: {
 					25140: { chargeSpeed: 0.3 }
 				}
