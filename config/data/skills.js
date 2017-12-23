@@ -2178,7 +2178,10 @@ module.exports = {
 	},
 	5: { // Archer
 		1: { // Arrow
-			0: { length: 400 }
+			0: {
+				noRetry: true,
+				length: 400
+			}
 		},
 		2: { // Arrow Volley
 			'*': { noRetry: true },
@@ -2326,8 +2329,9 @@ module.exports = {
 		6: { // Backstep
 			0: {
 				CC: ["evasive", "extended"],
-				length: 650,
+				length: 700,
 				distance: -200,
+				noRetry: true,
 				forceClip: true,
 			}
 		},
