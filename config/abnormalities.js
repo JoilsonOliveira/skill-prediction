@@ -31,7 +31,7 @@ module.exports = {
 	10152012: true, // Rolling Reload / Maybe wrong
 	//10152040: true, // Arcane Barrage Buff
 	//10152081: true, // Arcane Barrage projectile end? remains for about 3 seconds active
-	
+
 	// Burst Fire
 	10152050: true, // 1
 	10152053: true, // 0?

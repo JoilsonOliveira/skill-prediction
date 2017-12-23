@@ -1897,7 +1897,7 @@ module.exports = {
 			10: {
 				noInterrupt: [7, 26],
 				level: {
-					11: { 
+					11: {
 						abnormals: {
 							500150: { skill: 330110 },
 							501650: { skill: 330150 }
@@ -1908,7 +1908,7 @@ module.exports = {
 			11: {
 				noInterrupt: [7, 26],
 				level: {
-					11: { 
+					11: {
 						abnormals: {
 							500150: { skill: 330111 },
 							501650: { skill: 330151 }
@@ -1919,7 +1919,7 @@ module.exports = {
 			12: {
 				noInterrupt: [7, 26],
 				level: {
-					11: { 
+					11: {
 						abnormals: {
 							500150: { skill: 330112 },
 							501650: { skill: 330152 }
@@ -1946,7 +1946,7 @@ module.exports = {
 				},
 				level: {
 					9: {
-						abnormals: { 
+						abnormals: {
 							500150: { skill: 320100 },
 							501650: { skill: 320150 }
 						}
@@ -2341,11 +2341,12 @@ module.exports = {
 		8: { // Rapid Fire
 			'*': {
 				noRetry: true,
+				blockCancelPacket: true,
 				noInterrupt: [22] // this actually doesn't do anything
 			},
 			0: {
 				length: 433, // 445
-				noInterrupt: [6]
+				noInterrupt: [6, '8-6']
 			},
 			1: { length: 600 },
 			2: { length: 700 },
@@ -3489,7 +3490,6 @@ module.exports = {
 			'*': {
 				length: 1525,
 				distance: 137.88,
-				CC: ["evasive", "extended"],
 				noInterrupt: [20],
 				chains: {
 					'2-1': 30,
@@ -3512,22 +3512,21 @@ module.exports = {
 					10152000: 2100,
 					10152001: 2100
 				},
-				noInterrupt: [4],
-				//noRetry: true
+				noInterrupt: [4]
 			},
 			2: {
 				triggerAbnormal: {
 					10152000: 2100,
 					10152001: 2100
 				},
-				noInterrupt: [4],
-				//noRetry: true
+				noInterrupt: [4]
 			},
-			3: { // May need to set to false due to the client believing it can cast it when the skill has gone in CD already
+			3: {
 				length: 1195,
-				distance: -198.53
+				distance: -198.53 // Not possible to correctly emulate but needed for chaining
 			},
 			4: {
+				triggerAbnormal: { 10152002: 4100 },
 				length: 1195,
 				distance: -198.53
 			},
@@ -3536,8 +3535,7 @@ module.exports = {
 				triggerAbnormal: {
 					10152000: 2100,
 					10152001: 2100
-				},
-				//noRetry: true
+				}
 			}
 		},
 		5: { // Burst Fire

@@ -11,6 +11,6 @@
 * SkillDelayOnFail	   - Basic initial desync compensation. Useless at low ping (<50ms).
 
 * ServerTimeout	       - This number is added to your maximum ping + skill retry period to set the failure threshold for skills.
-											If animations are being cancelled while damage is still applied, increase this number.
+If animations are being cancelled while damage is still applied, increase this number.
 
 * DefendSuccessStrict  - Set this to false to see Brawler's Perfect Block icon at very high ping (warning: may crash client).
